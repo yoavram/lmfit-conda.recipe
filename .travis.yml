@@ -1,0 +1,17 @@
+# Install packages
+install:
+  - conda install -q conda-build jinja2 anaconda-client
+  - conda build conda-recipe
+  - conda install --use-local lmfit
+
+after_success:
+# Deploy to Anaconda.org (conditions inside script)
+  - chmod +x ./deploy_anaconda.sh
+
+# Deploy to Anaconda.org
+- provider: script
+script: ./deploy_anaconda.sh
+on:
+  tags: true
+  repo: lmfit/lmfit-py/
+skip_cleanup: true

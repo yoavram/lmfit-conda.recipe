@@ -1,10 +1,11 @@
 package:
   name: lmfit
-  version: {{ environ['GIT_DESCRIBE_TAG'] }}
+  version: 0.9.2
+  # {{ environ.get('GIT_DESCRIBE_TAG', '') }}
 
 build:
   number: 1
-  #  number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
+  #number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
 
   # Note that this will override the default build string with the Python
   # and NumPy versions
@@ -12,7 +13,7 @@ build:
 
 source:
   git_url: https://github.com/lmfit/lmfit-py.git
-  git_tag: 0.8.3
+  git_tag: 0.9.2
 
 requirements:
   build:

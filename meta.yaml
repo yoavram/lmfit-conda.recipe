@@ -1,6 +1,6 @@
 package:
   name: lmfit
-  version: 0.9.2
+  version: 0.9.3
   # {{ environ.get('GIT_DESCRIBE_TAG', '') }}
 
 build:
@@ -13,7 +13,7 @@ build:
 
 source:
   git_url: https://github.com/lmfit/lmfit-py.git
-  git_tag: 0.9.2
+  git_tag: 0.9.3
 
 requirements:
   build:
